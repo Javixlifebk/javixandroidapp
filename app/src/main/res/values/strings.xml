@@ -1,0 +1,290 @@
+<resources>
+    <string name="app_name">Healthcare 360°</string>
+    <string name="version">Version: Javix_V2.0.45</string>
+
+
+    <string name="title_activity_splash">Splash Screen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_login">Login Screen</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_negivation_drower">NegivationDrowerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_dashboard_ngo">DashboardNgo</string>
+
+
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- config data -->
+    <string name="spinner_title">Select</string>
+    <string name="qualification">Matriculate,Senior Secondary,Diploma,Bachelors,Masters</string>
+    <string name="sex">Male,Female,Others</string>
+    <string name="state">State,Andaman and Nicobar Islands,Andhra Pradesh,Arunachal Pradesh,Assam,
+                        Bihar,Chandigarh,Chhattisgarh,Dadra and Nagar Haveli,Daman and Diu,Delhi,Goa,
+                        Gujarat,Haryana,Himachal Pradesh,Jammu and Kashmir,Jharkhand,Karnataka,Kerala,Ladakh,
+                        Lakshadweep,Madhya Pradesh,Maharashtra,Manipur,Meghalaya,Mizoram,Nagaland,Odisha,Puducherry,
+                        Punjab,Rajasthan,Sikkim,Tamil Nadu,Telangana,Tripura,Uttar Pradesh,Uttarakhand,West Bengal</string>
+
+    <string name="blood_group">
+          Blood Group,A Positive,A Negative, B Positive,  B Negative,  AB Positive,  AB Negative,  O Positive, O Negative,
+
+    </string>
+
+    <string name="yes_no">YES,NO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="runtime_permissions_txt">
+        <![CDATA[Settings->Permission->Enable All Permissions.         \\n Please enable ALL permissions from app settings.]]>
+</string>
+
+
+    <string-array name="strIssue" translatable="false">
+        <item>Select Subject</item>
+        <item>Citizen Photo is not working</item>
+        <item>Problem in Edit Profile</item>
+        <item>Not able to map users</item>
+        <item>Login issue on web</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="strFeed" translatable="false">
+        <item>Feet</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="strInches" translatable="false">
+
+        <item>Inches</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+
+    <string-array name="strLipidType" translatable="false">
+        <item>Select Type</item>
+        <item>Pre Meal(Fasting)</item>
+        <item>Post Meal</item>
+        <item>Pre Exercise</item>
+        <item>Post Exercise</item>
+        <item>Non-Fasting(Random)</item>
+
+    </string-array>
+
+    <string-array name="strActors" translatable="false">
+        <item>Select Users</item>
+        <item>All</item>
+        <item>Doctor</item>
+        <item>Screener</item>
+        <item>Sevika</item>
+        <item>Ngo</item>
+        <item>Pharmacy</item>
+    </string-array>
+
+    <string-array name="strLEyes" translatable="false">
+        <item>Select Left Eye Range</item>
+        <item>6/60</item>
+        <item>6/36</item>
+        <item>6/24</item>
+        <item>6/18</item>
+        <item>6/12</item>
+        <item>6/9</item>
+        <item>6/6</item>
+    </string-array>
+    <string-array name="strREyes" translatable="false">
+        <item>Select Right Eye Range</item>
+        <item>6/60</item>
+        <item>6/36</item>
+        <item>6/24</item>
+        <item>6/18</item>
+        <item>6/12</item>
+        <item>6/9</item>
+        <item>6/6</item>
+    </string-array>
+    <string-array name="strCitizenSearch" translatable="false">
+        <item>Please Select</item>
+        <item>All</item>
+        <item>Case Picked</item>
+        <item>Prescribed</item>
+    </string-array>
+
+    <string-array name="strType" translatable="false">
+        <item>Select Type</item>
+        <item>Positive</item>
+        <item>Negative</item>
+        <item>Inconclusive</item>
+        <item>None</item>
+    </string-array>
+
+    <string-array name="strMType" translatable="false">
+        <item>Medicine Type</item>
+        <item>Tablet</item>
+        <item>Capsule</item>
+        <item>Teaspoon</item>
+        <item>Ointment</item>
+        <item>Spray</item>
+    </string-array>
+
+
+    <string-array name="optBool">
+        <item>select</item>
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="optNA">
+        <item>select</item>
+        <item>Normal</item>
+        <item>Abnormal</item>
+    </string-array>
+    <string-array name="optAI">
+        <item>select</item>
+        <item>Adequate</item>
+        <item>Inadequate</item>
+    </string-array>
+    <string-array name="optPA">
+        <item>select</item>
+        <item>Present</item>
+        <item>Absent</item>
+    </string-array>
+    <string-array name="optBelt">
+        <item>select</item>
+        <item>Seat Belt</item>
+        <item>Car Seat</item>
+        <item>Booster Seat</item>
+    </string-array>
+    <string-array name="optMMS">
+        <item>select</item>
+        <item>Mild</item>
+        <item>Moderate</item>
+        <item>Severe</item>
+    </string-array>
+    <string-array name="optAsthama4">
+        <item>select</item>
+        <item>Peak expiratory flow rate monitoring using diary</item>
+
+    </string-array>
+    <string-array name="optAsthama5">
+        <item>select</item>
+        <item>Daytime symptoms 1 to 2 times per month</item>
+        <item>Daytime symptoms 1 to 2 times per week</item>
+        <item>No daytime symptoms</item>
+    </string-array>
+    <string-array name="optAsthama6">
+        <item>select</item>
+        <item>Night-time symptoms present</item>
+        <item>Night symptoms 1 to 2 times per month</item>
+    </string-array>
+    <string-array name="optAsthama7">
+        <item>select</item>
+        <item>Disturbs sleep occasionally</item>
+        <item>Not disturbing sleep</item>
+        <item>Never disturbs sleep</item>
+        <item>Causes night awakening</item>
+        <item>Disturbs sleep frequently</item>
+    </string-array>
+    <string-array name="optDuration">
+        <item>Duration</item>
+        <item>Days</item>
+        <item>Weeks</item>
+        <item>Months</item>
+    </string-array>
+    <string-array name="optNodeDischarge">
+        <item>Discharge</item>
+        <item>Clear</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blood</item>
+    </string-array>
+    <string-array name="optCoughType">
+        <item>Type</item>
+        <item>Dry</item>
+        <item>Productive</item>
+        <item>Wet Sounding</item>
+    </string-array>
+
+    <string-array name="optPhlegmType">
+        <item>Type</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blood Stinged</item>
+        <item>Foul Smelling</item>
+    </string-array>
+    <string-array name="optEyeDischarge">
+        <item>Discharge</item>
+        <item>Watery</item>
+        <item>Purulent</item>
+    </string-array>
+    <string-array name="optLRSide">
+        <item>Side</item>
+        <item>Left</item>
+        <item>Right</item>
+        <item>Bilateral</item>
+    </string-array>
+    <string-array name="optRashType">
+        <item>Type</item>
+        <item>Maculopapular</item>
+        <item>Urticarial</item>
+        <item>Pustular</item>
+    </string-array>
+    <string-array name="optAbdoType">
+        <item>Type</item>
+        <item>Colicky</item>
+        <item>Dull Aching</item>
+        <item>Sharp</item>
+    </string-array>
+    <string-array name="optActivityType">
+        <item>Type</item>
+        <item>Normal</item>
+        <item>Decreased</item>
+
+    </string-array>
+    <string-array name="optVomitingType">
+        <item>Type</item>
+        <item>Bilious</item>
+        <item>Non-Bilious</item>
+        <item>Hemetemesis</item>
+        <item>Projectile</item>
+    </string-array>
+    <string-array name="optDiarrheaType">
+        <item>Type</item>
+        <item>Watery</item>
+        <item>Mucus</item>
+        <item>Blood and Mucus</item>
+
+    </string-array>
+
+</resources>

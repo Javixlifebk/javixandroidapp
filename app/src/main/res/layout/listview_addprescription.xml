@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/FirstText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="First"
+        android:layout_weight="1">
+    </TextView>
+
+    <TextView
+        android:id="@+id/SecondText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Second"
+        android:layout_weight="2">
+    </TextView>
+
+    <TextView
+        android:id="@+id/ThirdText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Third"
+        android:layout_weight="1">
+    </TextView>
+
+    <TextView
+        android:id="@+id/FourthText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Fourth"
+        android:layout_weight="1">
+    </TextView>
+</LinearLayout>

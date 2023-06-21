@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="_yes_en">Yes</string>
+    <string name="_yes_he">हाँ</string>
+
+    <string name="_no_en">No</string>
+    <string name="_no_he">नहीं</string>
+
+    <string name="_ok_en">Ok</string>
+    <string name="_ok_he">ठीक है</string>
+
+    <string name="_loading_en">loading</string>
+    <string name="_loading_he">लोड हो रहा है</string>
+
+    <string name="_logout_en">Do you want to logout!.</string>
+    <string name="_logout_he">क्या आप वाकई लॉग आउट करना चाहते हैं</string>
+
+    <string name="_offline_en">Do you want to go offline!.</string>
+    <string name="_offline_he">क्या आप ऑफलाइन जाना चाहते हैं.</string>
+
+    <string name="_citizenAdd_en">Citizen Added Successfully!.</string>
+    <string name="_citizenAdd_he">नागरिक सफलतापूर्वक जोड़ा गया !.</string>
+
+    <string name="_screeningAdd_en">Screening Done Successfully!.</string>
+    <string name="_screeningAdd_he">स्क्रीनिंग सफलतापूर्वक संपन्न हुई !.</string>
+
+    <string name="_symptomsAdd_en">Symptoms Test Done Successfully!.</string>
+    <string name="_symptomsAdd_he">लक्षण परीक्षण सफलतापूर्वक किया गया!.</string>
+
+    <string name="_generalSurveyAdd_en">General Survey Done Successfully!.</string>
+    <string name="_generalSurveyAdd_he">सामान्य सर्वेक्षण सफलतापूर्वक किया गया!.</string>
+
+    <string name="_healthSurveyAdd_en">Health Survey Done Successfully!.</string>
+    <string name="_healthSurveyAdd_he"> स्वास्थ्य सर्वेक्षण सफलतापूर्वक किया गया!.</string>
+
+    <string name="_socioeconomicSurveyAdd_en">Socioeconomic Survey Done Successfully!.</string>
+    <string name="_socioeconomicSurveyAdd_he">सामाजिक आर्थिक सर्वेक्षण सफलतापूर्वक किया गया!.</string>
+
+    <string name="_offlineSync_en">Offline Data sync Successfully!.</string>
+    <string name="_offlineSync_he">ऑफ़लाइन डेटा सिंक सफलतापूर्वक!.</string>
+    <string name="_firstName_en">First Name can’t be blank!.</string>
+    <string name="_firstName_he">पहला नाम खाली है!.</string>
+    <string name="_lastName_en">Last Name can’t be blank!.</string>
+    <string name="_lastName_he">आपका उपनाम खाली है!.</string>
+    <string name="_gender_en">Please select Gender!.</string>
+    <string name="_gender_he"> लिंग चुने!.</string>
+    <string name="_dob_en">DOB is can’t be blank!.</string>
+    <string name="_dob_he">जन्म की तारीख खाली है!.</string>
+    <string name="_adhaar_en">Aadhaar No. must be 12 digit length!.</string>
+    <string name="_adhaar_he">आधार संख्या 12 अंकों की होती है!.</string>
+    <string name="_phone_en">Enter Phone No!.</string>
+    <string name="_phone_he">कृपया फ़ोन नंबर दर्ज करें!.</string>
+    <string name="_state_en">Please select State!.</string>
+    <string name="_state_he">राज्य का चयन करे!.</string>
+    <string name="_district_en">Please select district!.</string>
+    <string name="_district_he">जिले का चयन करे!.</string>
+    <string name="_pin_en">Pin must 6 digit length!.</string>
+    <string name="_pin_he"> पिन 6 अंको की होती है!.</string>
+    <string name="_inputData_en"> Please Input Data!.</string>
+    <string name="_inputData_he">  कृपया डाटा डाले!.</string>
+    <string name="_inches_en"> Please select inches!.</string>
+    <string name="_inches_he"> इंच का चयन करे!.</string>
+    <string name="_weight_en"> Please select weight!.</string>
+    <string name="_weight_he"> वजन का चयन करे!.</string>
+    <string name="_bpSyc_en"> BP Systolic can’t be blank!.</string>
+    <string name="_bpSys_he"> सिस्टोलिक बी पी खाली है!.</string>
+    <string name="_bpDia_en"> BP Diastolic Can’t be blank!.</string>
+    <string name="_bpDia_he"> डायास्टोलिक बी पी खाली है!.</string>
+    <string name="_faimlySelected_en"> Family Id..Selected!.</string>
+    <string name="_faimlySelected_he"> परिवार पहचान चुन लिया गया!.</string>
+    <string name="_photomsg_en"> Please Capture Photo !.</string>
+    <string name="_photomsg_he"> कृपया फोटो कैप्चर करें!.</string>
+<!--
+    Family Id..Selected - परिवार पहचान चुन लिया गया
+    BP Diastolic Can’t be blank- डायास्टोलिक बी पी खाली है
+    BP Systolic can’t be blank- सिस्टोलिक बी पी खाली है
+    Please select weight- वजन का चयन करे
+    Please select inches- इंच का चयन करे
+    Please Input Data- कृपया डाटा डाले
+    Pin must 6 digit length- पिन 6 अंको की होती है
+    Please select district- जिले का चयन करे
+    Please select State- राज्य का चयन करे
+    Aadhaar No. must be 12 digit length- आधार संख्या 12 अंकों की होती है
+    DOB is can’t be blank- जन्म की तारीख खाली है
+    Please select Gender- लिंग चुने
+    Last Name can’t be blank- आपका उपनाम खाली है
+    First Name can’t be blank- पहला नाम खाली है
+    Loading - लोड हो रहा है
+    Do you want to go offline - क्या आप ऑफलाइन जाना चाहते हैं
+    Citizen Added Successfully - नागरिक सफलतापूर्वक जोड़ा गया
+    Screening Done Successfully - स्क्रीनिंग सफलतापूर्वक संपन्न हुई
+    Symptoms Test Done Successfully - लक्षण परीक्षण सफलतापूर्वक किया गया
+    General Survey Done Successfully - सामान्य सर्वेक्षण सफलतापूर्वक किया गया
+    xxx xxx xxx Family Id..Selected - परिवार आईडी ...........चयनित
+    Health Survey Done Successfully - स्वास्थ्य सर्वेक्षण सफलतापूर्वक किया गया
+    Socioeconomic Survey Done Successfully - सामाजिक आर्थिक सर्वेक्षण सफलतापूर्वक किया गया
+    Offline Data sync Successfully - ऑफ़लाइन डेटा सिंक सफलतापूर्वक
+    Are you sure want to logout - क्या आप वाकई लॉग आउट करना चाहते हैं
+    Ok - ठीक है
+    Yes -  हाँ
+    No - नहीं
+
+-->
+</resources>

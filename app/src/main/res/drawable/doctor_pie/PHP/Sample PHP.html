@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="http://smmtrad.educationdoctor.in/smmtrad/Payment/techprocess.php" name="techprocess" method="post" target="_blank">
+	<table class="tbl" width="60%" border="1" cellpadding="2" cellspacing="0">
+	<tr>
+    	<th width="40%">Field Description</th>
+        <th width="20%">Field Name</th>
+    </tr>
+    <tr>
+    	<td><label>Request Type</label>o</td>
+        <td><select name="reqType">
+        	<option value="T">T</option>
+        	<option value="S">S</option>  
+        	<option value="O">O</option>
+        	<option value="R">R</option>
+        	<option value="TNR">TNR</option>
+        	<option value="TCI">TCI</option>
+        	<option value="TWC">TWC</option>
+			<option value="TRC">TRC</option>
+			<option value="TCC">TCC</option>
+			<option value="TWI">TWI</option>
+			<option value="TIC">TIC</option>
+			<option value="TIO">TIO</option>
+			<option value="TWD">TWD</option>
+        	</select>
+        </td>
+    </tr>
+    <tr>
+    	<td><label>Merchant Code</label></td>
+        <td><input type="text" name="mrctCode" value=""/></td>
+    </tr>
+	<tr>
+    	<td><label>Merchant Transaction ID</label></td>
+        <td><input type="text" name="mrctTxtID" value="txn001"/></td>
+    </tr>
+     <tr>
+    	<td><label>Currency Code</label></td>
+        <td><input type="text" name="currencyType" value="INR"/></td>
+    </tr>
+    <tr>
+    	<td><label>Amount</label></td>
+        <td><input type="text" name="amount" onkeydown="updateReqDetail()" value=""/></td>
+    </tr>
+    <tr>
+    	<td><label>Client Meta Data</label></td>
+        <td><input type="text" name="itc" value="NIC~TXN0001~122333~rt14154~27 Sep 2019~Payment~forpayment"/></td>
+    </tr>
+    <tr>
+    	<td><label>Request Detail</label></td>
+        <td><input type="text" name="reqDetail" value="FIRST_10.00_0.0"/></td>
+    </tr>
+     <tr>
+    	<td><label>Transaction Date</label></td>
+        <td><input type="text" name="txnDate" value="27-09-2019"/></td>
+    </tr>
+    <tr>
+    	<td><label>Bank Code</label></td>
+     
+		 <td><input type="text" name="bankCode" value=""/></td>
+    </tr>
+     <tr>
+    	<td><label>Locator URL</label></td>
+        <td><select name="locatorURL">
+		        
+				<option value="https://www.tpsl-india.in/PaymentGateway/TransactionDetailsNew.wsdl">LIVE</option>
+				
+        	</select>
+        </td>
+    </tr>
+	<tr>
+    	<td><label>S2S URL </label></td>
+        <td>
+	       <input type="text" name="s2SReturnURL" value=""/>
+		</td>
+    </tr>
+    <tr>
+    	<td><label>TPSL Transaction ID</label></td>
+        <td><input type="text" name="tpsl_txn_id" value=""/></td>
+    </tr>
+	 <tr>
+    	<td><label>Card ID</label></td>
+        <td><input type="text" name="cardID" value=""/></td>
+    </tr>
+    <tr>
+    	<td><label>Customer ID</label></td>
+        <td><input type="text" name="custID" value=""/></td>
+    </tr>
+    <tr>
+    	<td><label>Customer Name</label></td>
+        <td><input type="text" name="custname" value=""/></td>
+    </tr>
+	<tr>
+    	<td><label>Timeout</label></td>
+        <td><input type="text" name="timeOut" value=""/></td>
+    </tr>
+	<tr>
+    	<td><label>Mobile Number</label></td>
+        <td><input type="text" name="mobNo" value=""/></td>
+    </tr>
+	<tr>
+    	<td><label>Account Number</label></td>
+        <td><input type="text" name="accNo" value=""/></td>
+    </tr>
+	<tr>
+    	<td><label>Tpv Account Number</label></td>
+        <td><input type="text" name="tpvAccntNo" value=""/></td>
+    </tr>
+   
+	<tr>
+    	<td><label>Key</label></td>
+        <td><input type="text" name="key" value=""/></td>
+    </tr>
+	<tr>
+    	<td><label>IV</label></td>
+        <td><input type="text" name="iv" value=""/></td>
+    </tr>
+	<tr>
+    	<td><label>Return URL </label></td>
+        <td>
+	        <input type="text" name="returnURL" value='http://smmtrad.educationdoctor.in/smmtrad/Payment/techprocess.php'/>
+		</td>
+    </tr>
+	<tr>
+        <td colspan=2>
+         <input type="submit" name="submit" value="Submit" />
+        </td>
+	</tr>
+</table>
+</form>
+<script type="text/javascript">
+	function updateReqDetail() {
+		var amount = document.techprocess.amount.value;
+		var reqDetail = "FIRST_" + amount + '_0.0';
+		document.techprocess.reqDetail.value = reqDetail;
+	}
+</script>
+</body>
+</html>
+
+  
+ 

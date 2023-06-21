@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    tools:context=".CitizenProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/game_id"
+            android:layout_marginRight="25dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="15dp">
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/roun_rect_orangemore"
+                        android:text="Citizen Profile"
+                        android:layout_marginBottom="10dp"
+
+                        android:gravity="center"
+                        android:textSize="20sp"/>
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/profile"
+                        app:civ_border_color="@color/colorBackroundWhite"
+                        app:civ_border_width="2dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dip"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Name :"
+                                    android:layout_gravity="left"
+                                    android:id="@+id/txName"
+                                    android:textColor="#1A90ED"
+                                    android:drawablePadding="8dp"
+                                    android:drawableLeft="@drawable/male_icon"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                            <Space
+                                android:layout_width="15dp"
+                                android:layout_height="15dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dip"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Email :"
+                                    android:layout_gravity="left"
+                                    android:id="@+id/txEmail"
+                                    android:drawablePadding="8dp"
+                                    android:drawableLeft="@drawable/ic_baseline_email_18"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                            <Space
+                                android:layout_width="15dp"
+                                android:layout_height="15dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dip"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mobile :"
+                                    android:layout_gravity="left"
+                                    android:id="@+id/txMobile"
+                                    android:drawablePadding="8dp"
+                                    android:drawableLeft="@drawable/phone_icon"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+
+                            <!--<Space
+                                android:layout_width="15dp"
+                                android:layout_height="15dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dip"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Qualification :"
+                                    android:layout_gravity="left"
+                                    android:id="@+id/txQualification"
+                                    android:drawablePadding="8dp"
+                                    android:drawableLeft="@drawable/ic_baseline_home_18"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                            <Space
+                                android:layout_width="15dp"
+                                android:layout_height="15dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dip"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Specialization :"
+                                    android:layout_gravity="left"
+                                    android:id="@+id/txSpecialization"
+                                    android:drawablePadding="8dp"
+                                    android:drawableLeft="@drawable/ic_baseline_work_18"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>-->
+
+                            <Space
+                                android:layout_width="15dp"
+                                android:layout_height="15dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dip"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="DOB :"
+                                    android:layout_gravity="left"
+                                    android:id="@+id/txDob"
+                                    android:drawablePadding="8dp"
+                                    android:drawableLeft="@drawable/event_icon"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                            <Space
+                                android:layout_width="15dp"
+                                android:layout_height="15dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dip"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Aadhaar No :"
+                                    android:layout_gravity="left"
+                                    android:id="@+id/txAdhaadNo"
+                                    android:drawablePadding="8dp"
+                                    android:drawableLeft="@drawable/ic_person_black_18dp"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                            <Space
+                                android:layout_width="15dp"
+                                android:layout_height="15dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dip"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Country :"
+                                    android:layout_gravity="left"
+                                    android:id="@+id/txCountry"
+                                    android:drawablePadding="8dp"
+                                    android:drawableLeft="@drawable/ic_baseline_home_18"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+
+                            <Space
+                                android:layout_width="15dp"
+                                android:layout_height="15dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dip"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="State :"
+                                    android:layout_gravity="left"
+                                    android:id="@+id/txState"
+                                    android:drawablePadding="8dp"
+                                    android:drawableLeft="@drawable/ic_baseline_home_18"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                            <Space
+                                android:layout_width="15dp"
+                                android:layout_height="15dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dip"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="District :"
+                                    android:layout_gravity="left"
+                                    android:id="@+id/txDistrict"
+                                    android:drawablePadding="8dp"
+                                    android:drawableLeft="@drawable/ic_baseline_home_18"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+
+                            <Space
+                                android:layout_width="15dp"
+                                android:layout_height="15dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dip"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address :"
+                                    android:layout_gravity="left"
+                                    android:id="@+id/txAddress"
+                                    android:drawablePadding="8dp"
+                                    android:drawableLeft="@android:drawable/ic_menu_directions"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                            <Space
+                                android:layout_width="15dp"
+                                android:layout_height="15dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="0dip"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pin Code :"
+                                    android:layout_gravity="left"
+                                    android:id="@+id/txPin"
+                                    android:drawablePadding="8dp"
+                                    android:drawableLeft="@drawable/ic_baseline_home_18"
+                                    android:textSize="18sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</LinearLayout>

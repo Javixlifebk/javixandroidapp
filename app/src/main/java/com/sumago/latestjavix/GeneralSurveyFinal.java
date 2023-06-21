@@ -1,0 +1,166 @@
+package com.sumago.latestjavix;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.sumago.latestjavix.Util.Config;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class GeneralSurveyFinal extends AppCompatActivity {
+
+    AppCompatButton btSearch,btnAdd;
+    EditText txSearch;
+    Context context;
+    TextView txCitizenDetails;
+    private ArrayList<String> arrayList = new ArrayList<>();
+    ArrayAdapter adapter;
+    private ListView listView;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        MyConfig.CONTEXT=getApplicationContext();
+        setContentView(R.layout.activity_general_survey_final);
+        btSearch=(AppCompatButton)findViewById(R.id.btnSearch);
+        txSearch=(EditText) findViewById(R.id.txSearch);
+        txCitizenDetails=(TextView) findViewById(R.id.txCitizenDetails);
+        btnAdd=(AppCompatButton)findViewById(R.id.btnAdd);
+        listView = (ListView)findViewById(R.id.listView);
+        adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
+        listView.setAdapter(adapter);
+        btSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                HashMap<String,String> paramHash=new HashMap<String,String>();
+                paramHash.put("firstName",txSearch.getText().toString());
+                paramHash.put("lastName",txSearch.getText().toString());
+                paramHash.put("mobile",txSearch.getText().toString());
+                paramHash.put("email",txSearch.getText().toString());
+                paramHash.put("citizenId",txSearch.getText().toString());
+                paramHash.put("token","dfjkhsdfaksjfh3756237");
+                paramHash.put("ngoId", Config.NGO_ID);
+                RequestCitizenList req=new RequestCitizenList(GeneralSurveyFinal.this,paramHash);
+                req.execute(MyConfig.URL_LIST_CITIZEN);
+            }
+        });
+
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                arrayList.add(txCitizenDetails.getText().toString());
+                adapter.notifyDataSetChanged();
+            }
+        };
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView adapterView, View view, int position, long l) {
+                Toast.makeText(GeneralSurveyFinal.this, ""+adapter.getItem(position), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(final AdapterView<?> adapterView, View view, int i, long l) {
+
+                final int item = i;
+
+                new AlertDialog.Builder(GeneralSurveyFinal.this)
+                        .setIcon(android.R.drawable.ic_delete)
+                        .setTitle("Are you sure ?")
+                        .setMessage("Do you want to delete this item")
+                        .setPositiveButton(GeneralSurveyFinal.this.getString(R.string._yes_he), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                arrayList.remove(item);
+                                adapter.notifyDataSetChanged();
+                            }
+                        })
+                        .setNegativeButton(GeneralSurveyFinal.this.getString(R.string._ok_he),null)
+                        .show();
+                return true;
+            }
+        });
+        btnAdd.setOnClickListener(listener);
+
+
+
+    }
+
+    class RequestCitizenList extends AsyncTask<String, Void, String>
+    {
+        ProgressDialog progressDialog;
+        Activity activity;
+        HashMap<String, String> paramsHash=null;
+        RequestPipe requestPipe=new RequestPipe();
+        public RequestCitizenList(Activity activity,HashMap<String, String> paramsHash) {
+            this.activity=activity;
+            this.paramsHash=paramsHash;
+            progressDialog = new ProgressDialog(activity);
+            progressDialog.setMessage("loading");
+        }
+        @Override
+        protected void onPreExecute()
+        {
+            progressDialog.show();
+        }
+        @Override
+        protected String doInBackground(String... params) {
+
+            return requestPipe.requestForm(params[0],paramsHash);
+        }
+        protected void onProgressUpdate(Void ...progress) {
+            super.onProgressUpdate(progress);
+            //ProgressDialog.show(MainActivity.this, "loading", "wait...", true, true);
+
+        }
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            progressDialog.cancel();
+            //Toast.makeText(MyConfig.CONTEXT,"RES:"+result,Toast.LENGTH_SHORT).show();
+            try {
+                JSONObject jsonObject = new JSONObject(result);
+                int respStatus=jsonObject.getInt("status");
+                if(respStatus==1) {
+                    Toast.makeText(MyConfig.CONTEXT, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+                    JSONObject recsData=jsonObject.getJSONObject("data");
+                    JSONArray recsArray=recsData.getJSONArray("data");
+                    int recsLen=recsArray.length();
+                    int j=0;
+                    for(int i=0;i<recsLen;i++){
+                        try {
+                            JSONObject rec = recsArray.getJSONObject(i);
+                            Log.e("Citizen Name", rec.getString("citizenId"));
+                            txCitizenDetails.setText(rec.getString("firstName") + " " +  rec.getString("lastName") + " " + rec.getString("citizenId"));
+                        }catch (Exception eei){System.out.println("Error 7801:"+eei.toString());}
+
+                    }// loop
+                }
+                else Toast.makeText(MyConfig.CONTEXT, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+
+            }catch (Exception ee){ System.out.println("final Error80901" + ee.getLocalizedMessage());}
+
+        }
+    }
+}

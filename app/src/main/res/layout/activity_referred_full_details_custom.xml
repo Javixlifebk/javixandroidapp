@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReferredFullDetails">
+
+
+    <TextView
+        android:id="@+id/tv_full_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:includeFontPadding="false"
+        android:text="Full Details"
+        android:textColor="@color/red"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_body_measurement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_full_details"
+        android:layout_gravity="left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/red_border"
+        android:fontFamily="@font/bevan"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="5dp"
+        android:text="Body Measurement"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_body_measurement"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="@font/amaranth"
+        android:text="Name: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_body_measurement"
+        android:layout_toRightOf="@+id/name"
+        android:text="Abc: " />
+
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_body_measurement"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/tv_refer_full_list_name"
+        android:fontFamily="@font/amaranth"
+        android:text="Gender: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_body_measurement"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/gender"
+        android:text="Gender: " />
+
+    <View
+        android:id="@+id/view_one"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/name"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorLightGray" />
+
+
+    <TextView
+        android:id="@+id/case_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_one"
+        android:layout_gravity="start"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/amaranth"
+        android:text="Case ID: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_case_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_one"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/case_id"
+        android:text="Abc: " />
+
+
+    <View
+        android:id="@+id/view_two"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/case_id"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorLightGray" />
+
+    <TextView
+        android:id="@+id/screening_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_two"
+        android:layout_gravity="start"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/amaranth"
+        android:text="Screening Date: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_screening_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_two"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/screening_date"
+        android:text="Abc: " />
+
+
+    <View
+        android:id="@+id/view_three"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/screening_date"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorLightGray" />
+
+
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_three"
+        android:layout_gravity="start"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/amaranth"
+        android:text="Height: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_three"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/height"
+        android:text="Abc: " />
+
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_three"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/tv_refer_full_list_height"
+        android:fontFamily="@font/amaranth"
+        android:text="Weight: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_three"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/weight"
+        android:text="Abc: " />
+
+
+    <TextView
+        android:id="@+id/bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_three"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/tv_refer_full_list_weight"
+        android:fontFamily="@font/amaranth"
+        android:text="BMI: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_three"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/bmi"
+        android:text="Abc: " />
+
+
+    <View
+        android:id="@+id/view_four"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/height"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorLightGray" />
+
+
+    <TextView
+        android:id="@+id/tv_vital_signs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_four"
+        android:layout_gravity="left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/red_border"
+        android:fontFamily="@font/bevan"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="5dp"
+        android:text="Vital Signs"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/bp_sys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_vital_signs"
+        android:layout_gravity="start"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/amaranth"
+        android:text="BP(Sys): "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_bp_sys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_vital_signs"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/bp_sys"
+        android:text="Abc: " />
+
+
+    <TextView
+        android:id="@+id/bp_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_vital_signs"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/tv_refer_full_list_bp_sys"
+        android:fontFamily="@font/amaranth"
+        android:text="BP(Dia): "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_bp_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_vital_signs"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/bp_dia"
+        android:text="Abc: " />
+
+
+    <TextView
+        android:id="@+id/sop2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_vital_signs"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/tv_refer_full_list_bp_dia"
+        android:fontFamily="@font/amaranth"
+        android:text="SpO2(%): "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_spo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_vital_signs"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/sop2"
+        android:text="Abc: " />
+
+
+    <View
+        android:id="@+id/view_five"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/bp_sys"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorLightGray" />
+
+
+    <TextView
+        android:id="@+id/heartRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_five"
+        android:layout_gravity="start"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/amaranth"
+        android:text="Heart Rate(bgm): "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_heart_rate_bgm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_five"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/heartRate"
+        android:text="Abc: " />
+
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_five"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/tv_refer_full_list_heart_rate_bgm"
+        android:fontFamily="@font/amaranth"
+        android:text="Temperature(f): "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_five"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/temperature"
+        android:text="abc: " />
+
+
+    <TextView
+        android:id="@+id/arm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_five"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/tv_refer_full_list_temperature"
+        android:fontFamily="@font/amaranth"
+        android:text="Arm: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_refer_full_list_arm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_five"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/arm"
+        android:text="Abc: " />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_refer_full_list_pick_prescribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_below="@+id/heartRate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/roun_rect_orange"
+        android:text="Pick &amp; Prescribe"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

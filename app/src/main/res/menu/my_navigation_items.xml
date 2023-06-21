@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_search"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"/>
+    <item android:id="@+id/action_settings"
+        android:title="Sync"
+        android:icon="@drawable/ic_baseline_sync_24" />
+    <item android:id="@+id/action_navigation"
+        android:title="Profile"
+        android:icon="@drawable/ic_baseline_account_circle_24"/>
+</menu>

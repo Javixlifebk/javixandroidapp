@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddCitizenActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="FormActivity"
+        tools:showIn="@layout/activity_add_citizen">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:id="@+id/layout_identification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        app:srcCompat="@drawable/svg_person_details"></ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="Personal Information" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <Space
+                                android:layout_width="15dp"
+                                android:layout_height="10dp" />
+
+                            <EditText
+                                android:id="@+id/txFname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/editView_btm"
+                                android:background="@drawable/edittext_rect"
+                                android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                                android:drawableStart="@drawable/person_icon"
+                                android:drawableLeft="@drawable/person_icon"
+                                android:drawablePadding="10dp"
+                                android:hint="* First Name"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:padding="@dimen/editText_pdng" />
+
+                            <EditText
+                                android:id="@+id/txLname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/editView_btm"
+                                android:background="@drawable/edittext_rect"
+                                android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                                android:drawableStart="@drawable/person_icon"
+                                android:drawableLeft="@drawable/person_icon"
+                                android:drawablePadding="10dp"
+                                android:hint="* Last Name"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:padding="@dimen/editText_pdng" />
+
+                            <RadioGroup
+                                android:id="@+id/radioGrp"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp">
+
+                                <RadioButton
+                                    android:id="@+id/identification_gender_male"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawableStart="@drawable/male_icon"
+                                    android:drawableLeft="@drawable/male_icon"
+                                    android:drawablePadding="6dp"
+                                    android:text="* Male" />
+
+                                <RadioButton
+                                    android:id="@+id/identification_gender_female"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:drawableStart="@drawable/female_icon"
+                                    android:drawableLeft="@drawable/female_icon"
+                                    android:drawablePadding="6dp"
+                                    android:text="* Female" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageview_id_picture"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_rect_2"
+                            android:paddingLeft="6dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="6dp"
+                            android:paddingBottom="4dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/ic_person_camera_intele" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/txMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/phone_icon"
+                        android:drawableLeft="@drawable/phone_icon"
+                        android:drawablePadding="10dp"
+                        android:hint="Mobile No"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/txEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/ic_baseline_email_24"
+                        android:drawableLeft="@drawable/ic_baseline_email_24"
+                        android:drawablePadding="10dp"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/addDoctorProfile_dbo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/event_icon"
+                        android:drawableLeft="@drawable/event_icon"
+                        android:drawablePadding="10dp"
+                        android:editable="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:hint="* DOB"
+                        android:imeOptions="actionUnspecified"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/addDoctorProfile_adhar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/ic_fingerprint_24px"
+                        android:drawableLeft="@drawable/ic_fingerprint_24px"
+                        android:drawablePadding="10dp"
+                        android:hint="* Aadhaar No"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/addDoctorProfile_radhar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/ic_fingerprint_24px"
+                        android:drawableLeft="@drawable/ic_fingerprint_24px"
+                        android:drawablePadding="10dp"
+                        android:hint="* Parental Aadhaar No"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/blood_group"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        app:srcCompat="@drawable/svg_location"></ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="Address Details" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/identification_llcountry_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/txCountry"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/editView_btm"
+                                android:background="@drawable/edittext_rect"
+                                android:drawableStart="@drawable/ic_baseline_flag_24"
+                                android:drawableLeft="@drawable/ic_baseline_flag_24"
+                                android:drawablePadding="10dp"
+                                android:editable="false"
+                                android:padding="@dimen/editText_pdng"
+                                android:text="INDIA" />
+
+                            <Spinner
+                                android:id="@+id/spnState"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/editView_btm"
+                                android:padding="@dimen/editText_pdng" />
+
+                            <Spinner
+                                android:id="@+id/spnDistrict"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/editView_btm"
+                                android:padding="@dimen/editText_pdng" />
+                            <!-- <EditText
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:background="@drawable/edittext_rect"
+                                 android:padding="@dimen/editText_pdng"
+                                 android:drawableStart="@drawable/ic_baseline_home_18"
+                                 android:drawableLeft="@drawable/ic_baseline_home_18"
+                                 android:drawablePadding="10dp"
+                                 android:layout_marginBottom="@dimen/editView_btm"
+                                 android:hint="District"
+                                 android:id="@+id/txDistrict"
+                                 />-->
+                            <EditText
+                                android:id="@+id/txPin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/editView_btm"
+                                android:background="@drawable/edittext_rect"
+                                android:drawableStart="@drawable/ic_baseline_home_18"
+                                android:drawableLeft="@drawable/ic_baseline_home_18"
+                                android:drawablePadding="10dp"
+                                android:hint="* Pin Code"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:padding="@dimen/editText_pdng" />
+
+                            <EditText
+                                android:id="@+id/txAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/editView_btm"
+                                android:background="@drawable/edittext_rect"
+                                android:drawableStart="@drawable/ic_baseline_home_18"
+                                android:drawableLeft="@drawable/ic_baseline_home_18"
+                                android:drawablePadding="10dp"
+                                android:hint="Address"
+                                android:inputType="textMultiLine"
+                                android:padding="@dimen/editText_pdng"
+
+                                />
+
+                            <Button
+                                android:id="@+id/addDoctorProfile_submit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/editView_btm"
+                                android:background="@drawable/black_rect"
+                                android:padding="@dimen/editText_pdng"
+                                android:text="Submit"
+                                android:textColor="#ffffff" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

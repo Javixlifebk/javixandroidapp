@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Fragments.HealthSurveyFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="FormActivity"
+        tools:showIn="@layout/activity_add_citizen">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:id="@+id/layout_identification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radioGrp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <RadioButton
+                        android:id="@+id/radioEnglish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="6dp"
+                        android:text="English" />
+
+                    <RadioButton
+                        android:id="@+id/radioHindi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="6dp"
+                        android:text="Hindi" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        app:srcCompat="@drawable/svg_person_details"></ImageView>
+
+                    <TextView
+                        android:id="@+id/lblHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="Health Survey" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblInfo"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="Select Family" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnadd"
+                        android:layout_width="48dp"
+                        android:layout_height="39dp"
+                        android:background="@drawable/ic_baseline_post_add_48"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/lblFamilyId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="" />
+
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="10dp" />
+
+                    <Spinner
+                        android:id="@+id/drinkingWaterSource"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/drinkingWaterDistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/isdrinkingWaterTreatmentRequired"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/NoOfPersonUsingToilets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/ic_baseline_label_important_24"
+                        android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                        android:drawablePadding="10dp"
+                        android:hint="* No of Person Using Toilets"
+                        android:inputType="number"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/NonUsageOfToilets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/DistanceOfSubcenters"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/DistanceOfPrimaryHealthcenters"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/DistanceOfCommunityHealthcenters"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/DistanceOfDistrictHospitals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/DistanceOfPathologyLab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/DistanceOfMedicalStore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/StatusOfDeliveryOfChildren"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/StatusOfVaccinationOfChildren"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/StatusOfFemaleRelatedProblem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/CentrallyIssuedHealthInsurance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/StateIssuedHealthInsurance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/PersonalHealthInsurance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/editView_btm"
+                        android:background="@drawable/black_rect"
+                        android:padding="@dimen/editText_pdng"
+                        android:text="Submit"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

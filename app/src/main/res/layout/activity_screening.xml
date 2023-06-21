@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".ScreeningActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="2dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/roun_rect_orange"
+                    android:text="Citizen Screening"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/tv_ac_title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:drawableLeft="@drawable/ic_baseline_assignment_24"
+                        android:drawablePadding="6dp"
+                        android:padding="10dp"
+                        android:text="शारीरिक माप"
+                        android:textColor="@color/javix_lightblue"
+                        android:textSize="16sp" />
+
+                    <ToggleButton
+                        android:id="@+id/toggleLng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textOff="Eng"
+                        android:textOn="Hin" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorLightGray" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="100"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+                    <!--<EditText
+                        android:layout_width="0dip"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_rect"
+                        android:padding="6dp"
+                        android:hint="Height(cm)"
+                        android:inputType="number"
+                        android:id="@+id/etHeight"
+                        />-->
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="50"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tv_feet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Feet"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <Spinner
+                            android:id="@+id/spnFeet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:layout_weight="1"
+                            android:padding="@dimen/editText_pdng" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="50"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_inches"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Inches"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <Spinner
+                            android:id="@+id/spnInches"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:layout_weight="1"
+                            android:padding="@dimen/editText_pdng" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="50"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_weight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Weight"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/etWeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:background="@drawable/edittext_rect"
+                            android:hint="Wt.(Kg)"
+                            android:inputType="numberDecimal"
+                            android:maxLength="5"
+                            android:padding="@dimen/editText_pdng" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="50"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_bmi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginBottom="8dp"
+                            android:text="BMI"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/etBmi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_rect"
+                            android:hint="BMI"
+                            android:inputType="number"
+                            android:padding="@dimen/editText_pdng" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorLightGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_ac_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:drawableLeft="@drawable/ic_addchart_24px"
+                        android:drawablePadding="6dp"
+                        android:paddingLeft="10dp"
+                        android:text="महत्वपूर्ण संकेत"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorLightGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <!--                    <EditText-->
+                    <!--                        android:layout_width="0dip"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:background="@drawable/edittext_rect"-->
+                    <!--                        android:padding="@dimen/editText_pdng"-->
+                    <!--                        android:hint="BP(Sys)"-->
+                    <!--                        android:maxLength="3"-->
+                    <!--                        android:inputType="number"-->
+                    <!--                        android:layout_marginBottom="@dimen/editView_btm"-->
+                    <!--                        android:id="@+id/etBpsys"-->
+                    <!--                        />-->
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etBpsys"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:hint="BP(Sys)"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!--                    <EditText-->
+                    <!--                        android:id="@+id/etBpdia"-->
+                    <!--                        android:layout_width="0dip"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginLeft="4dp"-->
+                    <!--                        android:layout_marginBottom="@dimen/editView_btm"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:background="@drawable/edittext_rect"-->
+                    <!--                        android:hint="BP(Dia)"-->
+                    <!--                        android:inputType="number"-->
+                    <!--                        android:maxLength="3"-->
+                    <!--                        android:padding="@dimen/editText_pdng" />-->
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etBpdia"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:hint="BP(Dia)"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!--                    <EditText-->
+                    <!--                        android:id="@+id/etSpo2"-->
+                    <!--                        android:layout_width="0dip"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginLeft="4dp"-->
+                    <!--                        android:layout_marginBottom="@dimen/editView_btm"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:background="@drawable/edittext_rect"-->
+                    <!--                        android:hint="SpO2(%)"-->
+                    <!--                        android:inputType="number"-->
+                    <!--                        android:maxLength="3"-->
+                    <!--                        android:padding="@dimen/editText_pdng" />-->
+
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etSpo2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:hint="SpO2(%)"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorLightGray" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etPulse"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:hint="Pulse(bpm)"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <!--                    <EditText-->
+                    <!--                        android:id="@+id/etPulse"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginLeft="0dp"-->
+                    <!--                        android:layout_marginBottom="@dimen/editView_btm"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:background="@drawable/edittext_rect"-->
+                    <!--                        android:hint="Pulse(bpm)"-->
+                    <!--                        android:inputType="number"-->
+                    <!--                        android:maxLength="3"-->
+                    <!--                        android:padding="@dimen/editText_pdng" />-->
+
+
+                    <EditText
+                        android:id="@+id/etResp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_rect"
+                        android:hint="Resp Rate"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:padding="@dimen/editText_pdng"
+                        android:visibility="gone" />
+
+                    <!--                    <EditText-->
+                    <!--                        android:id="@+id/etTemp"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginLeft="4dp"-->
+                    <!--                        android:layout_marginBottom="@dimen/editView_btm"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:background="@drawable/edittext_rect"-->
+                    <!--                        android:hint="Temp(F)"-->
+                    <!--                        android:inputType="numberDecimal"-->
+                    <!--                        android:maxLength="5"-->
+                    <!--                        android:padding="@dimen/editText_pdng" />-->
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etTemp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:hint="Temp(F)"
+                            android:inputType="numberDecimal"
+                            android:maxLength="5"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!--                    <EditText-->
+                    <!--                        android:id="@+id/etArm"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginLeft="4dp"-->
+                    <!--                        android:layout_marginBottom="@dimen/editView_btm"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:background="@drawable/edittext_rect"-->
+                    <!--                        android:hint="Arm(cm)"-->
+                    <!--                        android:inputType="numberDecimal"-->
+                    <!--                        android:maxLength="5"-->
+                    <!--                        android:padding="@dimen/editText_pdng" />-->
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etArm"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:hint="Arm(cm)"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorLightGray" />
+
+                <TextView
+                    android:id="@+id/txNotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:drawableLeft="@drawable/ic_addchart_24px"
+                    android:drawablePadding="6dp"
+
+                    android:padding="10dp"
+                    android:text="टिप्पणियाँ जोड़ें"
+                    android:textColor="@color/javix_lightblue"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:background="@drawable/edittext_rect"
+                    android:gravity="top"
+                    android:hint="Notes"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="6"
+                    android:padding="@dimen/editText_pdng"
+                    android:scrollbars="vertical"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/addScreenerProfile_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_marginTop="@dimen/editView_btm"
+                    android:background="@drawable/black_rect"
+                    android:padding="@dimen/editText_pdng"
+                    android:text="Submit"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".GeneralSurveyFinal">
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/layout_identification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        app:srcCompat = "@drawable/svg_person_details">
+                    </ImageView>
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:layout_gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:text="Add Family Members"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+                    <EditText
+                        android:layout_width="0dip"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/ic_baseline_search_24"
+                        android:drawableLeft="@drawable/ic_baseline_search_24"
+                        android:inputType="text"
+                        android:drawablePadding="10dp"
+                        android:padding="@dimen/editText_pdng"
+                        android:hint="* Search Citizen"
+                        android:maxLength="12"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:id="@+id/txSearch"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="48dp"
+                        android:layout_height="39dp"
+                        android:id="@+id/btnSearch"
+                        android:textColor="@color/white"
+                        android:background="@drawable/rightarrowbutton"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/editText_pdng"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:id="@+id/txCitizenDetails"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="48dp"
+                        android:layout_height="39dp"
+                        android:id="@+id/btnAdd"
+                        android:textColor="@color/white"
+                        android:background="@drawable/ic_baseline_post_add_48"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_margin="6dp"
+                    android:orientation="horizontal">
+                    <ListView
+                        android:id = "@+id/listView"
+                        android:layout_width = "fill_parent"
+                        android:layout_height = "wrap_content" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/addDoctorProfile_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/editView_btm"
+                    android:background="@drawable/black_rect"
+                    android:padding="@dimen/editText_pdng"
+                    android:text="Submit"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

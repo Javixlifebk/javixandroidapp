@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SurveyContinuousForm">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/red_border"
+        android:elevation="10dp"
+        android:padding="20dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/red_border"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imgV1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/pending" />
+
+                <ProgressBar
+                    android:id="@+id/progress_one"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_toStartOf="@id/imgV2"
+                    android:layout_toEndOf="@id/imgV1"
+                    android:layout_toRightOf="@id/imgV1"
+                    android:progress="0" />
+
+
+                <!--            <SeekBar-->
+                <!--                android:id="@+id/seekBar"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_alignEnd="@+id/imgV2"-->
+                <!--                android:layout_marginStart="15dp" />-->
+
+                <ImageView
+                    android:id="@+id/imgV2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/pending" />
+
+                <!--            <SeekBar-->
+                <!--                android:id="@+id/seekBar2"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_alignStart="@+id/imgV2"-->
+                <!--                android:layout_alignEnd="@+id/imgV3" />-->
+
+
+                <ProgressBar
+                    android:id="@+id/progress_two"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="155dp"
+                    android:layout_height="3dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="3dp"
+
+                    android:layout_marginEnd="3dp"
+                    android:layout_toStartOf="@id/imgV3"
+                    android:layout_toEndOf="@id/imgV2"
+                    android:layout_toRightOf="@id/imgV2"
+                    android:progress="0" />
+
+
+                <ImageView
+                    android:id="@+id/imgV3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/pending" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_general_survey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:id="@+id/layout_identification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/radioGrp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp">
+
+                        <RadioButton
+                            android:id="@+id/radioEnglish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="6dp"
+                            android:text="English" />
+
+                        <RadioButton
+                            android:id="@+id/radioHindi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="6dp"
+                            android:text="Hindi" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/lblHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/roun_rect_orange"
+                        android:text="General Survey"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        app:srcCompat="@drawable/svg_person_details"></ImageView>
+
+                    <TextView
+                        android:id="@+id/lblInfo"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="Add Family Members" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnadd"
+                        android:layout_width="48dp"
+                        android:layout_height="39dp"
+                        android:background="@drawable/ic_baseline_post_add_48"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ListView
+                        android:id="@+id/listView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="10dp" />
+
+                    <EditText
+                        android:id="@+id/txNoOfMembers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/ic_baseline_label_important_24"
+                        android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                        android:drawablePadding="10dp"
+                        android:hint="* No of Family Members"
+                        android:inputType="number"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/txHeadOfFamily"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/person_icon"
+                        android:drawableLeft="@drawable/person_icon"
+                        android:drawablePadding="10dp"
+                        android:hint="* Name of head of the family"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/txAgeOfHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/event_icon"
+                        android:drawableLeft="@drawable/event_icon"
+                        android:drawablePadding="10dp"
+                        android:hint="* Age of head of the family"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/txNoOfAdultMales"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/ic_baseline_label_important_24"
+                        android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                        android:drawablePadding="10dp"
+                        android:hint="* Number of other adult males"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/txNoOfAdultFemales"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/ic_baseline_label_important_24"
+                        android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                        android:drawablePadding="10dp"
+                        android:hint="* Number of other adult female"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/txNoOfChildMale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/ic_baseline_label_important_24"
+                        android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                        android:drawablePadding="10dp"
+                        android:hint="* Number of male children"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/txNoOfChildFemale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:drawableStart="@drawable/ic_baseline_label_important_24"
+                        android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                        android:drawablePadding="10dp"
+                        android:hint="* Number of female children"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:padding="@dimen/editText_pdng" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/editView_btm"
+                        android:background="@drawable/black_rect"
+                        android:padding="@dimen/editText_pdng"
+                        android:text="Next"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_health_survey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="FormActivity"
+            tools:showIn="@layout/activity_add_citizen">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:fillViewport="false">
+
+                <LinearLayout
+                    android:id="@+id/layout_identification_hs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/radioGrp_hs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp">
+
+                        <RadioButton
+                            android:id="@+id/radioEnglish_hs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="6dp"
+                            android:text="English" />
+
+                        <RadioButton
+                            android:id="@+id/radioHindi_hs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="6dp"
+                            android:text="Hindi" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            app:srcCompat="@drawable/svg_person_details"></ImageView>
+
+                        <TextView
+                            android:id="@+id/lblHeader_hs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:ems="10"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="Health Survey" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/lblInfo_hs"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="Select Family" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnadd_hs"
+                            android:layout_width="48dp"
+                            android:layout_height="39dp"
+                            android:background="@drawable/ic_baseline_post_add_48"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/lblFamilyId_hs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:ems="10"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="" />
+
+                        <Space
+                            android:layout_width="15dp"
+                            android:layout_height="10dp" />
+
+                        <Spinner
+                            android:id="@+id/drinkingWaterSource"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/drinkingWaterDistance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/isdrinkingWaterTreatmentRequired"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <EditText
+                            android:id="@+id/NoOfPersonUsingToilets"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:background="@drawable/edittext_rect"
+                            android:drawableStart="@drawable/ic_baseline_label_important_24"
+                            android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                            android:drawablePadding="10dp"
+                            android:hint="* No of Person Using Toilets"
+                            android:inputType="number"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/NonUsageOfToilets"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/DistanceOfSubcenters"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/DistanceOfPrimaryHealthcenters"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/DistanceOfCommunityHealthcenters"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/DistanceOfDistrictHospitals"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/DistanceOfPathologyLab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/DistanceOfMedicalStore"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/StatusOfDeliveryOfChildren"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/StatusOfVaccinationOfChildren"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/StatusOfFemaleRelatedProblem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/CentrallyIssuedHealthInsurance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/StateIssuedHealthInsurance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/PersonalHealthInsurance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <Button
+                            android:id="@+id/btnSubmit_hs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/editView_btm"
+                            android:background="@drawable/black_rect"
+                            android:padding="@dimen/editText_pdng"
+                            android:text="Next"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_socioeconomic_survey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="FormActivity"
+            tools:showIn="@layout/activity_add_citizen">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:fillViewport="false">
+
+                <LinearLayout
+                    android:id="@+id/layout_identification_ss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/radioGrp_ss"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp">
+
+                        <RadioButton
+                            android:id="@+id/radioEnglish_ss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="6dp"
+                            android:text="English" />
+
+                        <RadioButton
+                            android:id="@+id/radioHindi_ss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="6dp"
+                            android:text="Hindi" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            app:srcCompat="@drawable/svg_person_details"></ImageView>
+
+                        <TextView
+                            android:id="@+id/lblHeader_ss"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:ems="10"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="Socioecomonic Survey" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/lblInfo_ss"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="Select Family" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnadd_ss"
+                            android:layout_width="48dp"
+                            android:layout_height="39dp"
+                            android:background="@drawable/ic_baseline_post_add_48"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/lblFamilyId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:ems="10"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="" />
+
+                        <Space
+                            android:layout_width="15dp"
+                            android:layout_height="10dp" />
+
+                        <EditText
+                            android:id="@+id/noOfEarners"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:background="@drawable/edittext_rect"
+                            android:drawableStart="@drawable/ic_baseline_label_important_24"
+                            android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                            android:drawablePadding="10dp"
+                            android:hint="* No of Earners"
+                            android:inputType="number"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <EditText
+                            android:id="@+id/nameOfEarners"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:background="@drawable/edittext_rect"
+                            android:drawableStart="@drawable/ic_baseline_label_important_24"
+                            android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                            android:drawablePadding="10dp"
+                            android:hint="* Name of Earners"
+                            android:inputType="text"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <EditText
+                            android:id="@+id/ageOfEarners"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:background="@drawable/edittext_rect"
+                            android:drawableStart="@drawable/ic_baseline_label_important_24"
+                            android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                            android:drawablePadding="10dp"
+                            android:hint="* Age of Earners"
+                            android:inputType="text"
+                            android:minHeight="48dp"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/occupationOfEarners"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/isBankAccount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/statusOfHouse"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/totalIncome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/foodExpense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/healthExpense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/educationExpense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/intoxicationExpense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/conveyanceExpense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+
+                        <Spinner
+                            android:id="@+id/cultivableLand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginBottom="@dimen/editView_btm"
+                            android:padding="@dimen/editText_pdng" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <Button
+                            android:id="@+id/btnSubmit_ss"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/editView_btm"
+                            android:background="@drawable/black_rect"
+                            android:padding="@dimen/editText_pdng"
+                            android:text="Submit"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

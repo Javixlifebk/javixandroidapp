@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_addchart_24px" android:title="Doctors" ></item>
+    <item android:icon="@drawable/ic_anchor_24px" android:title="NGO" ></item>
+    <item android:icon="@drawable/ic_addchart_24px" android:title="Screener" ></item>
+    <item android:icon="@drawable/ic_addchart_24px" android:title="Pharmacy" ></item>
+    <item android:id="@+id/issues" android:title="Report Issues" android:icon="@drawable/ic_support_24px" ></item>
+    <item android:id="@+id/profile" android:title="Users" android:icon="@drawable/ic_face_24px" ></item>
+    <item android:id="@+id/network" android:title="Directory" android:icon="@drawable/ic_fingerprint_24px" ></item>
+    <item android:id="@+id/myreport" android:title="Actors" android:icon="@drawable/ic_dashboard_24px" ></item>
+
+</menu>

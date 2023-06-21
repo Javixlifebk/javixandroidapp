@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sumago.latestjavix">
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL." />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION" /> -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+    <queries>
+        <package android:name="com.ekodevices.android.intl" />
+        <package android:name="com.whatsapp" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LatestJavix_UpdateDesign"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".VideoIntigration.RecordVideoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VideoViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrescribedListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BreastiTestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ReferredFullDetails"
+            android:exported="false" />
+        <activity
+            android:name=".GeneralSurveyListTwo"
+            android:exported="false" />
+        <activity
+            android:name=".ShowReferredFullDataDrDashboarad"
+            android:exported="false" />
+        <activity
+            android:name=".ReferredListBySevikaInDrDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".RefereBySevika"
+            android:exported="false" />
+        <activity
+            android:name=".AllSurveyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SurveyContinuousForm"
+            android:exported="true" />
+        <activity android:name=".AddActorsActivity">
+
+            <!--
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+            -->
+
+        </activity>
+        <activity android:name=".MyThreading" />
+        <activity android:name=".OfflineCitizenList" />
+        <activity android:name=".OfflineDataSync" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".UpdateSevikaProfile" />
+        <activity android:name=".GeneralSurveyList" />
+        <activity
+            android:name=".SurveyMenuActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CitizenListSurvey"
+            android:parentActivityName=".GeneralSurvey" />
+        <activity
+            android:name=".SocioEconomic"
+            android:parentActivityName=".SurveyMenuActivity" />
+        <activity
+            android:name=".HealthSurvey"
+            android:parentActivityName=".SurveyMenuActivity" />
+        <activity android:name=".GeneralSurveyFinal" />
+        <activity
+            android:name=".GeneralSurvey"
+            android:exported="true"
+            android:parentActivityName=".SurveyMenuActivity" />
+        <activity android:name=".MyImageCropper" />
+        <activity android:name=".symptomslist" />
+        <activity android:name=".HeartActivity" />
+        <activity android:name=".AddMedicineActivity" />
+        <activity android:name=".UrineAnalysis" />
+        <activity
+            android:name=".InstantExam"
+            android:parentActivityName=".ScreenerActivity" />
+        <activity android:name=".VisualExam" />
+        <activity android:name=".CommonReport" />
+        <activity android:name=".LungFuncation" />
+        <activity android:name=".AddThalassemia" />
+        <activity android:name=".AddSickleCell" />
+        <activity android:name=".AddPrescriptionActivity" />
+        <activity
+            android:name=".HemoglobinActivity"
+            android:parentActivityName=".LabTestActivity" />
+        <activity
+            android:name=".EyeTestActivity"
+            android:parentActivityName=".LabTestActivity" />
+        <activity android:name=".RapidTestActivity" />
+        <activity
+            android:name=".CitizenProfileActivity"
+            android:parentActivityName=".CitizenListActivity" />
+        <activity
+            android:name=".LipidPanelActivity"
+            android:parentActivityName=".LabTestActivity" />
+        <activity
+            android:name=".BloodGlucose"
+            android:parentActivityName=".LabTestActivity" />
+        <activity
+            android:name=".DrugTestActivity"
+            android:parentActivityName=".LabTestActivity" />
+        <activity android:name=".SampleListActivity" />
+        <activity
+            android:name=".LabTestActivity"
+            android:parentActivityName=".TestListActivity" />
+        <activity
+            android:name=".TestListActivity"
+            android:parentActivityName=".CitizenListActivity" />
+        <activity android:name=".IssueAllActivity" />
+        <activity
+            android:name=".SevikaActivity"
+            android:exported="true" />
+        <activity android:name=".ViewDetailedScreening" />
+        <activity android:name=".IssueListActivity" />
+        <activity android:name=".QuestActivity" />
+        <activity android:name=".QueryActivity" />
+        <activity android:name=".DetailedScreeningFinalActivity" />
+        <activity android:name=".DetailedScreeningActivity" />
+        <activity
+            android:name=".IssueReportedActivity"
+            android:parentActivityName=".IssueListActivity" />
+        <activity android:name=".ChartActivity" />
+        <activity android:name=".ScreenerDoctorList" />
+        <activity android:name=".ScreeningDoneSuccessfully" />
+        <activity android:name=".CitizenAddedSussfully" />
+        <activity
+            android:name=".ViewScreenerProfileActivity"
+            android:parentActivityName=".ScreenerActivity" />
+        <activity
+            android:name=".ViewSevikaProfileActivity"
+            android:parentActivityName=".SevikaActivity" />
+        <activity
+            android:name=".ViewNgoProfileActivity"
+            android:parentActivityName=".NgoActivity" />
+        <activity
+            android:name=".ViewDoctorProfileActivity"
+            android:parentActivityName=".DoctorActivity" />
+        <activity android:name=".FormActivity" />
+        <activity android:name=".CareListView" />
+        <activity android:name=".ViewPrescriptionActivity" />
+        <activity
+            android:name=".ScreeningPickedActivity"
+            android:parentActivityName=".DoctorActivity" />
+        <activity android:name=".ScreeningViewActivity" />
+        <activity android:name=".ScreeningListActivity" />
+        <activity android:name=".PharmacyListActivity" />
+        <activity android:name=".DoctorListActivity" />
+        <activity
+            android:name=".ScreeningActivity"
+            android:exported="true"
+            android:parentActivityName=".TestListActivity" />
+        <activity
+            android:name=".CitizenListActivity"
+            android:parentActivityName=".ScreeningActivity" />
+        <activity
+            android:name=".AddCitizenActivity"
+            android:parentActivityName=".ScreenerActivity" />
+        <activity android:name=".RecentScreeningActivity" />
+        <activity android:name=".OndemandScreeningActivity" />
+        <activity android:name=".RecentOrderActivity" />
+        <activity android:name=".RinvestigationActivity" />
+        <activity android:name=".OinvestigationActivity" />
+        <activity android:name=".ScheduleActivity" />
+        <activity android:name=".ReportActivity" />
+        <activity android:name=".ReportIssueActivity" />
+        <activity android:name=".ChangeRequestActivity" />
+        <activity android:name=".MapScreenerActivity" />
+        <activity android:name=".DirectoryActivity" />
+        <activity android:name=".Prescription" />
+        <activity
+            android:name=".DashboardNgoActivity"
+            android:label="@string/title_activity_dashboard_ngo"
+            android:theme="@style/Theme.LatestJavix.NoActionBar" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ScreenerList" />
+        <activity android:name=".ngoLists" />
+        <activity android:name=".UserList" />
+        <activity
+            android:name=".AddNgoProfile"
+            android:parentActivityName=".NgoActivity" />
+        <activity
+            android:name=".AddDoctorProfile"
+            android:parentActivityName=".DoctorActivity" />
+        <activity
+            android:name=".AddScreenerProfile"
+            android:parentActivityName=".ScreenerActivity" />
+        <activity android:name=".ActivityNgoDashboard" />
+        <activity
+            android:name=".OtpActivity"
+            android:label="Otp Activity" />
+        <activity
+            android:name=".ForgotActivity"
+            android:label="Forgot Password"
+            android:parentActivityName=".LoginActivity" />
+        <activity
+            android:name=".AdminActivity"
+            android:label="Admin Dashboard" />
+        <activity
+            android:name=".DoctorActivity"
+            android:exported="true"
+            android:label="Doctor Dashboard"></activity>
+        <activity
+            android:name=".PharmacyActivity"
+            android:label="Pharmacy Dashboard" />
+        <activity
+            android:name=".NgoActivity"
+            android:label="NGO Dashboard"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ScreenerActivity"
+            android:theme="@style/Theme.LatestJavix_UpdateDesign"
+            android:label="Screener Dashboard" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login Screen"
+            android:theme="@style/Theme.LatestJavix_UpdateDesign"/>
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:theme="@style/Theme.LatestJavix_UpdateDesign">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Theme.LatestJavix.Fullscreen" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.sumago.latestjavix.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

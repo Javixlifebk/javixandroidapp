@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddActorsActivity">
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="2dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Actors"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/roun_rect_orange"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorLightGray"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    app:srcCompat = "@drawable/svg_person_details">
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:text="Personal Information"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="6dp"
+                android:orientation="vertical">
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:padding="@dimen/editText_pdng"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:id="@+id/spnActor"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_rect"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"
+                    android:hint="First Name"
+                    android:padding="@dimen/editText_pdng"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:id="@+id/etFname"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_rect"
+                    android:inputType="text"
+                    android:layout_marginLeft="4dp"
+                    android:hint="Last Name"
+                    android:padding="@dimen/editText_pdng"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:id="@+id/etLname"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_rect"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:layout_marginLeft="4dp"
+                    android:hint="Mobile No"
+                    android:padding="@dimen/editText_pdng"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:id="@+id/etMobile"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_rect"
+                    android:inputType="textEmailAddress"
+
+                    android:layout_marginLeft="4dp"
+                    android:hint="Email Address"
+                    android:padding="@dimen/editText_pdng"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:id="@+id/etEmail"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_rect"
+                    android:inputType="text"
+
+                    android:layout_marginLeft="4dp"
+                    android:hint="User Name"
+                    android:padding="@dimen/editText_pdng"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:id="@+id/etUser"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_rect"
+                    android:inputType="textPassword"
+
+                    android:layout_marginLeft="4dp"
+                    android:hint="New Password"
+                    android:padding="@dimen/editText_pdng"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:id="@+id/etPassword"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_rect"
+                    android:inputType="textPassword"
+
+                    android:layout_marginLeft="4dp"
+                    android:hint="Confirm Password"
+                    android:padding="@dimen/editText_pdng"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:id="@+id/etCPassword"
+                    />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/buttonsubmit"
+                    android:padding="@dimen/editText_pdng"
+                    android:layout_marginTop="@dimen/editView_btm"
+                    android:id="@+id/btSubmit"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

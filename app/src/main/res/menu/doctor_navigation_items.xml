@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu  xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:icon="@drawable/ic_anchor_24px" android:title="Ondemand Investigation" ></item>
+    <item android:icon="@drawable/ic_addchart_24px" android:title="Recent Investigation" ></item>
+    <item android:id="@+id/profile" android:title="Profile" android:icon="@drawable/ic_face_24px"></item>
+    <item android:id="@+id/issues" android:title="Report Issues" android:icon="@drawable/ic_support_24px" ></item>
+    <item android:id="@+id/network" android:title="Directory" android:icon="@drawable/ic_fingerprint_24px" ></item>
+    <item android:id="@+id/myreport" android:title="Report" android:icon="@drawable/ic_dashboard_24px" ></item>
+
+
+    <!--<item android:id="@+id/screening" android:title="Investigation" android:icon="@drawable/ic_anchor_24px">
+        <menu>
+            <item android:icon="@drawable/ic_anchor_24px" android:title="Ondemand Investigation" android:onClick="btn_MenuAction12"></item>
+            <item android:icon="@drawable/ic_addchart_24px" android:title="Recent Investigation" android:onClick="btn_MenuAction12"></item>
+
+        </menu>
+
+    </item>-->
+
+
+   <!-- <item android:id="@+id/profile" android:title="Profile" android:icon="@drawable/ic_face_24px" android:onClick="btn_MenuAction12"></item>
+    <item android:id="@+id/network" android:title="Directory" android:icon="@drawable/ic_fingerprint_24px" android:onClick="btn_MenuAction12"></item>
+    <item android:id="@+id/issues" android:title="Report Isuues" android:icon="@drawable/ic_support_24px" android:onClick="btn_MenuAction12"></item>
+    <item android:id="@+id/myreport" android:title="Report" android:icon="@drawable/ic_dashboard_24px" android:onClick="btn_MenuAction12"></item>
+    <item android:id="@+id/report" android:title="Schedules" android:icon="@drawable/ic_dashboard_24px" android:onClick="btn_MenuAction12"></item>
+    <item android:id="@+id/logout" android:title="Logout" android:icon="@drawable/ic_dashboard_24px" android:onClick="btn_logout"></item>-->
+</menu>

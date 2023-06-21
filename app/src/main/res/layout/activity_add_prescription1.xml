@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddPrescriptionActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="2dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/roun_rect_orange"
+                    android:text="Add Prescription"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorLightGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etMedicine"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_rect"
+                        android:hint="Medicine Name"
+                        android:inputType="text"
+                        android:padding="@dimen/editText_pdng" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etStrength"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_rect"
+                        android:hint="Strength"
+                        android:inputType="number"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/spnSUnit"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/etDosage"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_rect"
+                        android:hint="Dosage"
+                        android:inputType="number"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/spnDUnit"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:padding="@dimen/editText_pdng" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spnPreparation"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/spnRoute"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:padding="@dimen/editText_pdng" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spnDirection"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/spnFrequency"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:padding="@dimen/editText_pdng" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etDuration"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_rect"
+                        android:hint="Duration"
+                        android:inputType="number"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <Spinner
+                        android:id="@+id/spnDrUnit"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/etQuantity"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_rect"
+                        android:hint="Total Quantity"
+                        android:inputType="number"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnadd"
+                        android:layout_width="48dp"
+                        android:layout_height="39dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/ic_baseline_post_add_48"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <!--<LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/white"
+                  android:layout_margin="6dp"
+                  android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/chkMorning"
+                        android:layout_width="0dip"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_height="wrap_content"
+                        android:text="Morning"/>
+                    <CheckBox
+                        android:id="@+id/chkAfternoon"
+                        android:layout_width="0dip"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_height="wrap_content"
+                        android:text="Afternoon"/>
+                    <CheckBox
+                        android:id="@+id/chkEvening"
+                        android:layout_width="0dip"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_height="wrap_content"
+                        android:text="Evening"/>
+                </LinearLayout>-->
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/etCause"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:hint="Cause"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/etMedicineDescripion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:hint="Other Instructions"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <EditText
+                        android:id="@+id/etTests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:hint="Input Tests"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <ListView
+                            android:id="@+id/listView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="100dp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/prescription_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/editView_btm"
+                        android:background="@drawable/buttonsubmit"
+                        android:padding="@dimen/editText_pdng"
+                        android:text="Submit"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,288 @@
+{"LEU":{
+		"t1": "LEUKOCYTES",
+		"t2":"120 seconds",
+		"b1":{
+		  "t1":"NEGATIVE",
+		  "color":"#E0E7B4"
+		},
+		"b2":null,
+		"b3":null,
+		"b4":{
+		  "t1":"TRACE",
+		  "color":"#DAD5B8"
+		},
+		"b5":{
+		  "t1":"SMALL",
+		  "color":"#BFB8A5"
+		},
+		"b6":{
+		  "t1":"MODERATE",
+		  "color":"#987691"
+		},
+		"b7":{
+		  "t1":"LARGE",
+		  "color":"#896490"
+		}
+},
+"NIT":{
+		"t1": "NITRITES",
+		"t2":"60 seconds",
+		"b1":{
+		  "t1":"NEGATIVE",
+		  "color":"#FAF9DB"
+		},
+		"b2":null,
+		"b3":null,
+		"b4":null,
+		"b5":{
+		  "t1":"POSITIVE",
+		  "color":"#FEEECD"
+		},
+		"b6":null,
+		"b7":{
+		  "t1":"POSITIVE",
+		  "color":"#FCCDC7"
+		}
+},
+
+"URO":{
+		"t1": "UROBILINOGEN",
+		"t2":"60 seconds",
+		"b1":{
+		  "t1":"NORMAL(0.2)",
+		  "color":"#FCC79D"
+		},
+		"b2":{
+		  "t1":"NORMAL(1)",
+		  "color":"#F8A796"
+		},
+		"b3":null,
+		"b4":null,
+		"b5":{
+		  "t1":"2",
+		  "color":"#F59390"
+		},
+		"b6":{
+		  "t1":"4",
+		  "color":"#F58C89"
+		},
+		"b7":{
+		  "t1":"8",
+		  "color":"#F16F8B"
+		}
+},
+
+"PRO":{
+		"t1": "PROTEIN",
+		"t2":"60 seconds",
+		"b1":{
+		  "t1":"NEGATIVE",
+		  "color":"#D3E279"
+		},
+		"b2":{
+		  "t1":"TRACE",
+		  "color":"#ACCF6B"
+		},
+		"b3":null,
+		"b4":{
+		  "t1":"30 +",
+		  "color":"#97BD72"
+		},
+		"b5":{
+		  "t1":"100 ++",
+		  "color":"#7CB68E"
+		},
+		"b6":{
+		  "t1":"300 +++",
+		  "color":"#44AB98"
+		},
+		"b7":{
+		  "t1":"2000 or more ++++",
+		  "color":"#149988"
+		}
+},
+
+"pH":{
+		"t1": "pH",
+		"t2":"60 seconds",
+		"b1":{
+		  "t1":"5.0",
+		  "color":"#F58555"
+		},
+		"b2":{
+		  "t1":"6.0",
+		  "color":"#FAA555"
+		},
+		"b3":{
+		  "t1":"6.5",
+		  "color":"#E0BF4E"
+		},
+		"b4":{
+		  "t1":"7.0",
+		  "color":"#AFBE57"
+		},
+		"b5":{
+		  "t1":"7.5",
+		  "color":"#6EA554"
+		},
+		"b6":{
+		  "t1":"8.0",
+		  "color":"#049868"
+		},
+		"b7":{
+		  "t1":"8.5",
+		  "color":"#137C78"
+		}
+},
+
+"BLO":{
+		"t1": "BLOOD",
+		"t2":"60 seconds",
+		"b1":{
+		  "t1":"NEGATIVE(NON HEMOLYZED)",
+		  "color":"#ECBC3C"
+		},
+		"b2":{
+		  "t1":"TRACE(NON HEMOLYZED)",
+		  "color":"#EDBF38"
+		},
+		"b3":{
+		  "t1":"MODERATE(NON HEMOLYZED)",
+		  "color":"#D2BF58"
+		},
+		"b4":{
+		  "t1":"TRACE(HEMOLYZED)",
+		  "color":"#BEBC43"
+		},
+		"b5":{
+		  "t1":"SMALL +",
+		  "color":"#85A750"
+		},
+		"b6":{
+		  "t1":"MODERATE ++",
+		  "color":"#3A8753"
+		},
+		"b7":{
+		  "t1":"LARGE +++",
+		  "color":"#2A523A"
+		}
+},
+
+"SG":{
+		"t1": "SPECIFIC GRAVITY",
+		"t2":"45 seconds",
+		"b1":{
+		  "t1":"1.000",
+		  "color":"#024848"
+		},
+		"b2":{
+		  "t1":"1.005",
+		  "color":"#116F54"
+		},
+		"b3":{
+		  "t1":"1.010",
+		  "color":"#4C7A49"
+		},
+		"b4":{
+		  "t1":"1.015",
+		  "color":"#72874C"
+		},
+		"b5":{
+		  "t1":"1.020",
+		  "color":"#8A944D"
+		},
+		"b6":{
+		  "t1":"1.025",
+		  "color":"#888E48"
+		},
+		"b7":{
+		  "t1":"1.030",
+		  "color":"#BC9E44"
+		}
+},
+
+"KET":{
+		"t1": "KETONE",
+		"t2":"40 seconds",
+		"b1":{
+		  "t1":"NEGATIVE",
+		  "color":"#DFB698"
+		},
+		"b2":null,
+		"b3":{
+		  "t1":"TRACE 5",
+		  "color":"#F7B09E"
+		},
+		"b4":{
+		  "t1":"SMALL 15",
+		  "color":"#E88280"
+		},
+		"b5":{
+		  "t1":"MODERATE 40",
+		  "color":"#C26168"
+		},
+		"b6":{
+		  "t1":"LARGE 80",
+		  "color":"#964653"
+		},
+		"b7":{
+		  "t1":"LARGE 160",
+		  "color":"#6B313D"
+		}
+},
+
+
+"BIL":{
+		"t1": "BILIRUBIN",
+		"t2":"30 seconds",
+		"b1":{
+		  "t1":"NEGATIVE",
+		  "color":"#F5E6A3"
+		},
+		"b2":null,
+		"b3":null,
+		"b4":null,
+		"b5":{
+		  "t1":"SMALL +",
+		  "color":"#F2D7A2"
+		},
+		"b6":{
+		  "t1":"MODERATE ++",
+		  "color":"#C9C19A"
+		},
+		"b7":{
+		  "t1":"LARGE +++",
+		  "color":"#C6AE96"
+		}
+},
+
+"GLU":{
+		"t1": "GLUCOSE",
+		"t2":"30 seconds",
+		"b1":{
+		  "t1":"NEGATIVE",
+		  "color":"#6FC7AF"
+		},
+		"b2":null,
+		"b3":{
+		  "t1":"100",
+		  "color":"#6EBF85"
+		},
+		"b4":{
+		  "t1":"250",
+		  "color":"#5EAE59"
+		},
+		"b5":{
+		  "t1":"500",
+		  "color":"#8B914B"
+		},
+		"b6":{
+		  "t1":"1000",
+		  "color":"#837642"
+		},
+		"b7":{
+		  "t1":"2000 or more",
+		  "color":"#815435"
+		}
+}
+}

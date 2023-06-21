@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="Fragments.GeneralSurveyFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_identification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radioGrp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <RadioButton
+                        android:id="@+id/radioEnglish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="6dp"
+                        android:text="English" />
+
+                    <RadioButton
+                        android:id="@+id/radioHindi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="6dp"
+                        android:text="Hindi" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/lblHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roun_rect_orange"
+                    android:text="General Survey"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    app:srcCompat="@drawable/svg_person_details"></ImageView>
+
+                <TextView
+                    android:id="@+id/lblInfo"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="Add Family Members" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnadd"
+                    android:layout_width="48dp"
+                    android:layout_height="39dp"
+                    android:background="@drawable/ic_baseline_post_add_48"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <Space
+                    android:layout_width="15dp"
+                    android:layout_height="10dp" />
+
+                <EditText
+                    android:id="@+id/txNoOfMembers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:background="@drawable/edittext_rect"
+                    android:drawableStart="@drawable/ic_baseline_label_important_24"
+                    android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                    android:drawablePadding="10dp"
+                    android:hint="* No of Family Members"
+                    android:inputType="number"
+                    android:padding="@dimen/editText_pdng" />
+
+                <EditText
+                    android:id="@+id/txHeadOfFamily"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:background="@drawable/edittext_rect"
+                    android:drawableStart="@drawable/person_icon"
+                    android:drawableLeft="@drawable/person_icon"
+                    android:drawablePadding="10dp"
+                    android:hint="* Name of head of the family"
+                    android:padding="@dimen/editText_pdng" />
+
+                <EditText
+                    android:id="@+id/txAgeOfHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:background="@drawable/edittext_rect"
+                    android:drawableStart="@drawable/event_icon"
+                    android:drawableLeft="@drawable/event_icon"
+                    android:drawablePadding="10dp"
+                    android:hint="* Age of head of the family"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="@dimen/editText_pdng" />
+
+                <EditText
+                    android:id="@+id/txNoOfAdultMales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:background="@drawable/edittext_rect"
+                    android:drawableStart="@drawable/ic_baseline_label_important_24"
+                    android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                    android:drawablePadding="10dp"
+                    android:hint="* Number of other adult males"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:padding="@dimen/editText_pdng" />
+
+                <EditText
+                    android:id="@+id/txNoOfAdultFemales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:background="@drawable/edittext_rect"
+                    android:drawableStart="@drawable/ic_baseline_label_important_24"
+                    android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                    android:drawablePadding="10dp"
+                    android:hint="* Number of other adult female"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:padding="@dimen/editText_pdng" />
+
+                <EditText
+                    android:id="@+id/txNoOfChildMale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:background="@drawable/edittext_rect"
+                    android:drawableStart="@drawable/ic_baseline_label_important_24"
+                    android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                    android:drawablePadding="10dp"
+                    android:hint="* Number of male children"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:padding="@dimen/editText_pdng" />
+
+                <EditText
+                    android:id="@+id/txNoOfChildFemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/editView_btm"
+                    android:background="@drawable/edittext_rect"
+                    android:drawableStart="@drawable/ic_baseline_label_important_24"
+                    android:drawableLeft="@drawable/ic_baseline_label_important_24"
+                    android:drawablePadding="10dp"
+                    android:hint="* Number of female children"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:padding="@dimen/editText_pdng" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/editView_btm"
+                    android:background="@drawable/black_rect"
+                    android:padding="@dimen/editText_pdng"
+                    android:text="Submit"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

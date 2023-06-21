@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BloodGlucose">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fillViewport="false">
+
+        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="2dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/roun_rect_orange"
+                    android:text="Blood Glucose"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorLightGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/spnType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:padding="@dimen/editText_pdng" />
+                    <!-- <EditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/edittext_rect"
+                         android:editable="false"
+                         android:padding="@dimen/editText_pdng"
+                         android:hint="DATE/TIME"
+                         android:inputType="text"
+                         android:layout_marginBottom="@dimen/editView_btm"
+                         android:id="@+id/etDate"
+                         />-->
+                    <EditText
+                        android:id="@+id/etGlucose"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:hint="Glucose Measurement(Mg/Dl)"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:padding="@dimen/editText_pdng" />
+
+                    <TextView
+                        android:id="@+id/txNotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:drawableLeft="@drawable/ic_addchart_24px"
+                        android:drawablePadding="6dp"
+                        android:padding="10dp"
+                        android:text="Add Notes"
+                        android:textColor="@color/javix_lightblue"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/etNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="@dimen/editView_btm"
+                        android:background="@drawable/edittext_rect"
+                        android:gravity="top"
+                        android:hint="Notes"
+                        android:inputType="textMultiLine"
+
+                        android:lines="8"
+                        android:maxLines="6"
+                        android:padding="@dimen/editText_pdng"
+                        android:scrollbars="vertical"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/editView_btm"
+                    android:background="@drawable/black_rect"
+                    android:padding="@dimen/editText_pdng"
+                    android:text="Submit"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</LinearLayout>

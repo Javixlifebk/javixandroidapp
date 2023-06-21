@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="2dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/screenerListRow_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_alignParentTop="true"
+                android:text="screener Titel"
+                android:textColor="#1A90ED"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/screenerListRow_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/screenerListRow_name"
+                android:paddingLeft="6dp"
+                android:text="Sex"
+                android:textColor="#A7B5BD"
+                android:textSize="18sp" />
+
+
+            <LinearLayout
+                android:id="@+id/screenerrow_layTL"
+                android:layout_width="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/screenerListRow_name"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/screenerListRow_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="screener Id"
+                    android:textColor="#669AC3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txCaseid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/screenerListRow_id"
+                    android:text="Case ID :"
+                    android:textColor="#A7B5BD"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/screenerrow_layML"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/screenerrow_layTL"
+                android:layout_marginTop="5sp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/screenerListRow_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:text="screener Address"
+                    android:drawableStart="@drawable/ic_location"
+                    android:textColor="#6A756A"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/screenerrow_layBL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_below="@+id/screenerrow_layML"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10sp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/screenerListRow_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_baseline_email_18"
+                    android:drawablePadding="6dp"
+                    android:text="Email"
+                    android:textColor="@color/javix_lightblue"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/screenerListRow_screenerMobileNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/phone_icon"
+                    android:drawablePadding="6dp"
+                    android:textColor="#114898"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/txWatsapp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/whatsapp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/screenerrow_layBL"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10sp"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnrecent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/doctor_bag"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+
+                <Button
+                    android:id="@+id/btnRefer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/red"
+                    android:includeFontPadding="true"
+                    android:text="Refer" />
+
+                <ImageView
+                    android:id="@+id/btnadd"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/ic_baseline_post_add_48"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/btnView"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:src="@drawable/ic_baseline_preview_48"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

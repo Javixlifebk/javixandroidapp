@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BreastiTestActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/bungee"
+                android:includeFontPadding="false"
+                android:padding="6dp"
+                android:text="Breast-i Test"
+                android:textColor="@color/red"
+                android:textSize="25dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:fontFamily="@font/amaranth"
+                    android:text="Symptoms"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:fontFamily="@font/amaranth"
+                    android:gravity="center"
+                    android:text="Checked"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:fontFamily="@font/amaranth"
+                    android:gravity="center"
+                    android:text="Right \nBreast"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:fontFamily="@font/amaranth"
+                    android:gravity="center"
+                    android:text="Right \nCyclic"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:fontFamily="@font/amaranth"
+                    android:gravity="center"
+                    android:text="Left \nBreast"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:fontFamily="@font/amaranth"
+                    android:gravity="center"
+                    android:text="Left \nCyclic"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/txtLumps"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:fontFamily="@font/alike_angular"
+                    android:text="Lumps"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cb_lumps"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/lamps1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/lamps2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/lamps3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/lamps4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+
+                <TextView
+                    android:id="@+id/txt_nipple_discharge"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="20"
+                    android:fontFamily="@font/alike_angular"
+                    android:text="Nipple Discharge"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cb_nipple"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/nipple1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/nipple2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/nipple3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/nipple4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/txtNipple_Retraction"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="20"
+                    android:fontFamily="@font/alike_angular"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Nipple/Skin Retraction"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+                <CheckBox
+                    android:id="@+id/cb_Skin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/skin1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/skin2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/skin3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/skin4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/txtSwelling"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:fontFamily="@font/alike_angular"
+                    android:text="Swelling"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+                <CheckBox
+                    android:id="@+id/cb_swelling"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swelling1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:fontFamily="@font/alike_angular"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swelling2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swelling3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swelling4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/txtRash"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="20"
+                    android:fontFamily="@font/alike_angular"
+                    android:text="Rash/Scaling"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cb_rash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/rash1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/rash2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/rash3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/rash4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/txtBreast"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:fontFamily="@font/alike_angular"
+                    android:text="Breast Pain"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cb_breast"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/breast1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/breast2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/breast3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/breast4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="16"
+                    android:gravity="center"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/thumb"
+                    app:showText="true"
+                    app:track="@drawable/track" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txNotesRightBreast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_addchart_24px"
+                android:drawablePadding="6dp"
+                android:padding="7dp"
+                android:text="Add Notes(Right Breast)"
+                android:textColor="@color/javix_lightblue"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etNotesRightBreast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/editView_btm"
+                android:background="@drawable/edittext_rect"
+                android:hint="Notes"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/editText_pdng"
+                android:scrollbars="vertical"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/txNotesLeftBreast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_addchart_24px"
+                android:drawablePadding="6dp"
+                android:padding="7dp"
+                android:text="Add Notes(Left Breast)"
+                android:textColor="@color/javix_lightblue"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etNotesLeftBreast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginBottom="@dimen/editView_btm"
+                android:background="@drawable/edittext_rect"
+                android:hint="Notes"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/editText_pdng"
+                android:scrollbars="vertical"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/breastiSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_marginTop="@dimen/editView_btm"
+                android:background="@drawable/black_rect"
+                android:padding="@dimen/editText_pdng"
+                android:text="Submit"
+                android:textColor="#ffffff" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

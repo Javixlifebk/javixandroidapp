@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CitizenListActivity">
+
+    <LinearLayout
+        android:id="@+id/lnr_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spnActor"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/editView_btm"
+            android:layout_weight="1"
+            android:padding="@dimen/editText_pdng" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/editView_btm"
+            android:layout_weight="1"
+            android:background="@drawable/black_rect"
+            android:padding="@dimen/editText_pdng"
+            android:text="Search"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/roun_rect_orange"
+        android:text="Citizen List"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/citizenList_searchBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15px"
+        android:background="@drawable/edittext_rect"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:drawablePadding="10dp"
+        android:padding="@dimen/editText_pdng" />
+
+    <TextView
+        android:id="@+id/waitGifCList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text=""
+
+        android:textColor="#23aa00"
+        android:textSize="16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/citizenListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

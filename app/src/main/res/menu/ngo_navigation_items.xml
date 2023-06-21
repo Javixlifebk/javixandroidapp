@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item android:id="@+id/myscreener" android:title="Screener" android:icon="@drawable/ic_anchor_24px">
+        <menu>
+            <item android:icon="@drawable/ic_anchor_24px" android:title="Map Screener" android:onClick="btn_MenuAction12"></item>
+            <item android:icon="@drawable/ic_addchart_24px" android:title="Change Request" android:onClick="btn_MenuAction12"></item>
+        </menu>
+    </item>-->
+    <item android:icon="@drawable/ic_anchor_24px" android:title="Map Screener" ></item>
+    <item android:icon="@drawable/ic_addchart_24px" android:title="Change Request" ></item>
+    <item android:id="@+id/myprofile" android:title="Profile" android:icon="@drawable/ic_face_24px" ></item>
+    <item android:id="@+id/issues" android:title="Report Issues" android:icon="@drawable/ic_support_24px" ></item>
+    <item android:id="@+id/mynework" android:title="Directory" android:icon="@drawable/ic_fingerprint_24px" ></item>
+    <item android:id="@+id/report" android:title="Report" android:icon="@drawable/ic_dashboard_24px" ></item>
+    
+</menu>
